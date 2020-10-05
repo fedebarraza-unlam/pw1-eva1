@@ -122,3 +122,9 @@ aside{
 aside img{
     width: calc(20% - 1%);
 }
+aside a:hover { 
+    text-decoration: underline; 
+}
+aside img:hover { 
+    -webkit-filter: invert(.75); filter: invert(.75); 
+}
