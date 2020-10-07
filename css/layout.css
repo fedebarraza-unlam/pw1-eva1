@@ -1,130 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');/*main*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /*h2*/
-*{
-    padding: 0%;
-    margin: 0%;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"); /*main*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"); /*h2*/
+
+* {
+  padding: 0%;
+  margin: 0%;
 }
 
 /*HEADER*/
-header{
-    background-color: #0093d5;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-    margin: auto;
+header {
+  background-color: #0093d5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  margin: auto;
 }
-.logo{
-    width: 25%;
-    display: flex;
-    position: relative;
-    align-items: center;
+.logo {
+  width: 25%;
+  display: flex;
+  position: relative;
+  align-items: center;
 }
-.logo img{
-    width: 20%;
-    position: relative;
-    left: 50%;
+.logo img {
+  width: 20%;
+  position: relative;
+  left: 50%;
 }
-.buscador{
-    display: flex;
-    align-items: center;
-    width: 75%;
-    margin: auto;
+.buscador {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: auto;
 }
-.buscador button{
-    background-color: white;
-    border: 0px;
-    padding-top: 10px;
-    border-radius: 0px 5px 5px 0px;
-    height: 40px;
-    width: 3.75%;
-    background-image: url("../img/search-24px.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.buscador button {
+  background-color: white;
+  border: 0px;
+  padding-top: 10px;
+  border-radius: 0px 5px 5px 0px;
+  height: 40px;
+  width: 3.75%;
+  background-image: url("../img/search-24px.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.buscador input{
-    width: 80%;
-    box-sizing: border-box;
-    border:0px;
-    height: 40px;
-    border-radius: 5px 0px 0px 5px;
+.buscador input {
+  width: 80%;
+  box-sizing: border-box;
+  border: 0px;
+  height: 40px;
+  border-radius: 5px 0px 0px 5px;
 }
 
 /*MENU*/
-.menu{
-    background-color: #00aeff;
+.menu {
+  background-color: #00aeff;
 }
-.menu ul{
-    display: flex;
-    justify-content: center;
+.menu ul {
+  display: flex;
+  justify-content: center;
 }
-.menu li{
-    list-style: none;
+.menu li {
+  list-style: none;
 }
-.menu a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    display: block;
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
 }
-.menu a:hover{
-    color: #0093d5;
-    background-color: #dcefff;
+.menu a:hover {
+  color: #0093d5;
+  background-color: #dcefff;
 }
 
 /*BODY*/
-body{
-    background-color: white;
-    font-family: 'Roboto Condensed', sans-serif;
+body {
+  background-color: white;
+  font-family: "Roboto Condensed", sans-serif;
 }
-main{
-    width: 80%;
-    margin: auto;
+main {
+  width: 80%;
+  margin: auto;
 }
-main section{
-    padding-top: 10px;
-    padding-bottom: 10px;
+main section {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-h2{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    font-size: xx-large;
-    color: #0093d5;
-    padding-top: 5px;
-    padding-bottom: 5px;
+h2 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: xx-large;
+  color: #0093d5;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /*FOOTER*/
-footer{
-    align-items: flex-start;
-    justify-content: space-around;
-    color: white;
-    background-color: rgb(36, 32, 32);
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: large;
+footer {
+  align-items: flex-start;
+  justify-content: space-around;
+  color: white;
+  background-color: rgb(36, 32, 32);
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: large;
 }
-footer h3{
-    margin-bottom: 5%;
+footer h3 {
+  margin-bottom: 5%;
 }
-aside{
-    margin-top: 10px;
-    width: calc(20% - 5%);
+aside {
+  margin-top: 10px;
+  width: calc(20% - 5%);
 }
-aside img{
-    width: calc(20% - 1%);
+aside img {
+  width: calc(20% - 1%);
 }
-aside a:hover { 
-    text-decoration: underline; 
+aside a:hover {
+  text-decoration: underline;
 }
-aside img:hover { 
-    -webkit-filter: invert(.75); filter: invert(.75); 
+aside img:hover {
+  -webkit-filter: invert(0.75);
+  filter: invert(0.75);
 }
