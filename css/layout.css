@@ -78,7 +78,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 main {
-  width: 80%;
+  max-width: 1440px; /* Dejar que se expanda hasta el ancho maximo  */
   margin: auto;
 }
 main section {
