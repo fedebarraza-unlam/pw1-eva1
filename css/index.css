@@ -29,6 +29,10 @@ h1 {
   padding: 20px 40px;
 }
 
+h2 {
+  color: #fff;
+}
+
 .main-menu .main-links {
   display: flex;
   align-items: center;
