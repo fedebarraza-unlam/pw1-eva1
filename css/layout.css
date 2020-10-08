@@ -57,6 +57,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 nav li {
   list-style: none;
@@ -91,14 +92,14 @@ main section {
 
 h1 {
   margin: 20px;
-  font-size: xx-large;
+  font-size: 1.7em;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  font-size: xx-large;
+  font-size: 1.5em;
   color: #0093d5;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -132,9 +133,6 @@ aside {
 }
 aside img {
   width: calc(20% - 1%);
-}
-aside a:hover{
-    text-decoration: overline;
 }
 .menu-inferior a:hover {
   text-decoration: underline;
