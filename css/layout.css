@@ -132,7 +132,7 @@ aside {
 aside img {
   width: calc(20% - 1%);
 }
-aside a:hover {
+.menu-inferior a:hover {
   text-decoration: underline;
 }
 aside img:hover {
