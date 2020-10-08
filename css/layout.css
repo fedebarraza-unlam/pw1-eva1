@@ -81,6 +81,7 @@ body {
 main {
   max-width: 1440px; /* Dejar que se expanda hasta el ancho maximo  */
   margin: auto;
+  width: 80%;
 }
 
 main section {
@@ -131,6 +132,9 @@ aside {
 }
 aside img {
   width: calc(20% - 1%);
+}
+aside a:hover{
+    text-decoration: overline;
 }
 .menu-inferior a:hover {
   text-decoration: underline;
