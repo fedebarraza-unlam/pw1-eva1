@@ -1,0 +1,78 @@
+
+a{
+    text-decoration: none;
+}
+p{
+    margin: 5px 0px;
+}
+p a{
+    color: black;
+    font-size: large;
+}
+p a:hover{
+    text-decoration: overline;
+}
+article{
+    margin: 0px 25px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+}
+h1{
+    margin: 50px;
+    text-align: center;
+}
+h2{
+    margin: 30px;
+    text-align: center;
+}
+h3{
+    margin: 20px 0px;
+    font-size: 25px;
+}
+h4{
+    margin-bottom: 10px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+}
+.sintomas-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sintomas-img img{
+    margin: 0px 50px;
+    width: calc(50% - 100px);
+}
+.descripcion img{
+    width: 100%;
+}
+.imagenes-medidas{
+    display: flex;
+}
+.imagenes-medidas article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+.imagenes-medidas article img{
+    width: calc(25% - 40px);
+    margin-bottom: 20px;
+}
+.informacion-hospital{
+    width: 35%;
+}
+.informacion-hospital h3{
+    color: #0093d5;
+}
+.informacion-hospital img, .mapa{
+    width: 65%;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
