@@ -2,10 +2,6 @@
     padding: 0;
     margin: 0;
 }
-section{
-    display: flex;
-    flex-direction: row;
-}
 form button{
     padding: 6px;
     color: #fff;
