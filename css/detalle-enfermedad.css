@@ -1,21 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    font-family: 'Roboto Condensed', sans-serif;
-}
-main{
-    width: 70%;
-    margin: auto;
-}
+
 a{
     text-decoration: none;
 }
 p{
     margin: 5px 0px;
+}
+p a{
+    color: black;
+    font-size: large;
+}
+p a:hover{
+    text-decoration: overline;
 }
 article{
     margin: 0px 25px;
@@ -25,17 +20,17 @@ article{
 h1{
     margin: 50px;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
 }
 h2{
     margin: 30px;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
 }
 h3{
     margin: 20px 0px;
-    font-family: 'Open Sans', sans-serif;
     font-size: 25px;
+}
+h4{
+    margin-bottom: 10px;
 }
 section{
     display: flex;
@@ -53,4 +48,31 @@ section{
 }
 .descripcion img{
     width: 100%;
+}
+.imagenes-medidas{
+    display: flex;
+}
+.imagenes-medidas article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+.imagenes-medidas article img{
+    width: calc(25% - 40px);
+    margin-bottom: 20px;
+}
+.informacion-hospital{
+    width: 35%;
+}
+.informacion-hospital h3{
+    color: #0093d5;
+}
+.informacion-hospital img, .mapa{
+    width: 65%;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
 }
