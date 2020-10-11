@@ -10,7 +10,6 @@
 header {
   background-color: #0093d5;
   padding-top: 20px;
-  padding-bottom: 20px;
   width: 100%;
   margin: auto;
 }
@@ -53,6 +52,7 @@ header {
 /*MENU*/
 nav {
   background-color: #00aeff;
+  margin-top: 20px;
 }
 nav ul {
   display: flex;
@@ -93,6 +93,7 @@ h1 {
   margin: 20px;
   font-size: xx-large;
   text-transform: uppercase;
+  color: #0093d5;
 }
 
 h2 {
