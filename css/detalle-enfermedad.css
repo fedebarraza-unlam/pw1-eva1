@@ -32,7 +32,11 @@ h3{
 h4{
     margin-bottom: 10px;
 }
-section{
+.detalle-main{
+    display: flex;
+    flex-direction: row;
+}
+.info-mapa{
     display: flex;
     flex-direction: row;
 }
