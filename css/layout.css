@@ -84,7 +84,6 @@ body {
 main {
   max-width: 1440px; /* Dejar que se expanda hasta el ancho maximo  */
   margin: auto;
-  width: 80%;
 }
 
 main section {
@@ -94,7 +93,7 @@ main section {
 
 h1 {
   margin: 20px;
-  font-size: 1.7em;
+  font-size: 2em;
   text-transform: uppercase;
   color: #0093d5;
 }
@@ -143,4 +142,10 @@ aside img {
 aside img:hover {
   -webkit-filter: invert(0.75);
   filter: invert(0.75);
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 80%;
+  }
 }
