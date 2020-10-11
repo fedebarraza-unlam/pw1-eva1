@@ -64,6 +64,14 @@ h2 {
   list-style: none;
 }
 
+.datos-contacto ul li a {
+  color: #000;
+}
+
+.datos-contacto ul li a:hover {
+  text-decoration: underline;
+}
+
 .ubicacion {
   flex-basis: 100%;
   display: flex;

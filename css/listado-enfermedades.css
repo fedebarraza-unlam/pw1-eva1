@@ -1,66 +1,70 @@
-.buscador-2{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: auto;
+.heading {
+  text-align: center;
 }
-.buscador-2 button{
-    background-color: rgb(228, 228, 228);
-    border: 0px;
-    padding-top: 10px;
-    border-radius: 8px 0px 0px 8px;
-    height: 60px;
-    width: 3.75%;
-    background-image: url("../img/search-24px.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.buscador-enfermedades {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
-.buscador-2 input{
-    font-size: 20px;
-    text-indent: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 5px;
-    height: 60px;
-    border-radius: 0px 8px 8px 0px;
-    background-color: rgb(228, 228, 228);
-    border-color: rgb(0, 0, 0);
+.buscador-enfermedades button {
+  background-color: rgb(228, 228, 228);
+  border: 0px;
+  padding-top: 10px;
+  border-radius: 8px 0px 0px 8px;
+  height: 60px;
+  width: 3.75%;
+  background-image: url("../img/search-24px.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.listado{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    box-sizing: border-box;
+.buscador-enfermedades input {
+  font-size: 20px;
+  text-indent: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px;
+  height: 60px;
+  border-radius: 0px 8px 8px 0px;
+  background-color: rgb(228, 228, 228);
+  border-color: rgb(0, 0, 0);
 }
-.listado .miniatura{
-    flex-direction: row;
-    margin: 50px 15px;
-    width: calc(35% - 30px);
+.listado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  box-sizing: border-box;
 }
-.listado .detalle{
-    flex-direction: row;
-    margin: 50px 15px;
-    margin-left: 45px;
-    width: calc(65% - 60px);
+.listado .miniatura {
+  flex-direction: row;
+  margin: 50px 15px;
+  width: calc(35% - 30px);
 }
-.listado h3{
-    font-family: 'Open Sans', sans-serif;
-    font-size: xx-large;
-    margin: 10px 0px;
+.listado .detalle {
+  flex-direction: row;
+  margin: 50px 15px;
+  margin-left: 45px;
+  width: calc(65% - 60px);
 }
-.listado img{
-    width: 100%;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: rgb(114, 114, 114);
+.listado h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  margin: 10px 0px;
 }
-.boton-detalle{
-    background-color: #00aeff;
-    font-family: 'Roboto Condensed', sans-serif;
-    border-style: none;
-    border-radius: 5px;
-    font-size: 120%;
-    height: 40px;
-    width: 100px;
-    margin: 20px 0px;
+.listado img {
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(114, 114, 114);
+}
+.boton-detalle {
+  background-color: #00aeff;
+  font-family: "Roboto Condensed", sans-serif;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 120%;
+  height: 40px;
+  width: 100px;
+  margin: 20px 0px;
 }
