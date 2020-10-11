@@ -8,8 +8,10 @@
 
 /*HEADER*/
 header {
-  padding: 20px;
   background-color: #0093d5;
+}
+header .contenedor {
+  padding: 20px 0;
 }
 .logo {
   width: 25%;
@@ -53,7 +55,6 @@ header {
 /*MENU*/
 nav {
   background-color: #00aeff;
-  margin-top: 20px;
 }
 nav ul {
   display: flex;
