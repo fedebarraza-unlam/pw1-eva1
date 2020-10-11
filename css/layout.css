@@ -43,6 +43,7 @@ header .contenedor {
   background-image: url("../img/search-24px.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .buscador input {
   width: 80%;
@@ -136,6 +137,15 @@ aside {
 aside img {
   width: calc(20% - 1%);
 }
+
+.datos-grupo ul {
+  list-style: none;
+}
+
+.datos-grupo ul li {
+  margin-bottom: 5px;
+}
+
 .menu-inferior a:hover {
   text-decoration: underline;
 }
