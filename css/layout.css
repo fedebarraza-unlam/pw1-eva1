@@ -8,16 +8,17 @@
 
 /*HEADER*/
 header {
+  padding: 20px;
   background-color: #0093d5;
-  padding-top: 20px;
-  width: 100%;
-  margin: auto;
 }
 .logo {
   width: 25%;
   display: flex;
   position: relative;
   align-items: center;
+}
+.logo a {
+  width: 100%;
 }
 .logo img {
   width: 20%;
