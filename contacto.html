@@ -14,41 +14,47 @@
     <header>
         <section class="contenedor">
             <article class="logo">
-                <img src="img/logo-unlam.png" alt="">
+                <a href="index.html"><img src="img/logo-unlam.png" alt="logo"></a>
             </article>
             <article class="buscador">
-                <datalist id="enfermedades">
-                    <option value=""></option>
-                    <option value="Enfermedad 1"></option>
-                    <option value="Enfermedad 2"></option>
-                    <option value="Enfermedad 3"></option>
-                    <option value="Enfermedad 4"></option>
+                <datalist id="menu">
+                    <option>VACUNACIÓN</option>
+                    <option>CONTACTO</option>
+                    <option>ENFERMEDADES</option>
+                    <option>HOSPITALES</option>
+                    <option>COVID-19</option>
+                    <option>RESFRIADO COMÚN</option>
+                    <option>GRIPE</option>
+                    <option>RINOFARINGITIS</option>
+                    <option>BRONQUITIS</option>
                 </datalist>
-                <input type="text" list="enfermedades">
+                <input type="text" list="menu">
                 <button for="enfermedades"></button>
             </article>
         </section>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="listado-enfermedades.html">ENFERMEDADES</a></li>
+                    <li><a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
+                            target="blank">VACUNACIÓN</a></li>
+                    <li><a href="mapa-hospitales.html">HOSPITALES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="listado-enfermedades.html">ENFERMEDADES</a></li>
-            <li><a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
-                    target="blank">VACUNACIÓN</a></li>
-            <li><a href="mapa-hospitales.html">HOSPITALES</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-    </nav>
     <main>
         <section class="formulario-contacto">
             <h2>Contacto</h2>
-            <form action="get">
+            <form action="contacto.html" method="GET">
                 <label for="nombre">Nombre</label>
                 <input name="nombre" type="text">
-                <label name="apellido" for="Apellido">Apellido</label>
-                <input type="text">
+                <label for="Apellido">Apellido</label>
+                <input name="apellido" type="text">
                 <label for="email">Email</label>
-                <input type="email">
+                <input name="email" type="email">
                 <label for="consulta">Consulta:</label>
                 <textarea name="consulta"></textarea>
                 <button>Enviar</button>
@@ -57,32 +63,33 @@
         <section class="datos-contacto">
             <h2>Datos De Contacto</h2>
             <ul>
-                <li>Dirección</li>
-                <li>Teléfono</li>
-                <li>Celular</li>
-                <li>Email</li>
-                <li>Web</li>
+                <li>Dirección: Florencio Varela 1903, San Justo</li>
+                <li>Teléfono: (+5411) 4480-8900</li>
+                <li>Celular: (+5411) 4480-8900</li>
+                <li>Email: <a href="mailto:covid-19@unlam.edu.ar">covid-19@unlam.edu.ar</a></li>
+                <li>Web: <a href="https://www.unlam.edu.ar/" target="blank">www.unlam.edu.ar</a></li>
             </ul>
         </section>
         <section class="ubicacion">
             <h2>Ubicación</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3740269052632!2d-58.56505924962148!3d-34.6705084684452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1601694899899!5m2!1ses!2sar"
-                height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
     </main>
     <footer class="contenedor">
         <aside>
-            <small>
+            <small class="datos-grupo">
                 <h3>Datos del grupo:</h3>
-                Surace Lucas - 43202347<br>
-                Barraza Federico - 36902241<br>
-                Damian Marin - 38130107
+                <ul>
+                    <li>Surace Lucas - 43202347</li>
+                    <li>Barraza Federico - 36902241</li>
+                    <li>Damian Marin - 38130107</li>
+                </ul>
             </small>
         </aside>
         <aside>
-            <small>
+            <small class="menu-inferior">
                 <h3>Menu inferior: </h3>
                 <a href="listado-enfermedades.html">Enfermedades</a><br>
                 <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
