@@ -60,6 +60,12 @@ form div {
   padding: 5px 0px;
   width: calc(100% - 20px);
 }
+.error{
+  color: red;
+}
+#datos, #paises{
+  display: none;
+}
 .select-sintoma {
   display: flex;
   flex-direction: row;
