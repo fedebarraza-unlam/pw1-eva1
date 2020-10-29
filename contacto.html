@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Inicio | Clinica Bastia</title>
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <title>Contacto | Clinica Bastia</title>
 </head>
 
 <body>
@@ -31,47 +32,49 @@
                 <button for="enfermedades"></button>
             </article>
         </section>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="listado-enfermedades.html">ENFERMEDADES</a></li>
+                    <li><a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
+                            target="blank">VACUNACIÓN</a></li>
+                    <li><a href="mapa-hospitales.html">HOSPITALES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
-        <section class="hero-image">
-            <img class="arrow left" src="img/hero/chevron-left-solid.svg" alt="Left Arrow">
-            <img class="arrow right" src="img/hero/chevron-right-solid.svg" alt="Right Arrow">
+        <section class="formulario-contacto">
+            <h2>Contacto</h2>
+            <form action="contacto.html" method="GET">
+                <label for="nombre">Nombre</label>
+                <input name="nombre" type="text">
+                <label for="Apellido">Apellido</label>
+                <input name="apellido" type="text">
+                <label for="email">Email</label>
+                <input name="email" type="email">
+                <label for="consulta">Consulta:</label>
+                <textarea name="consulta"></textarea>
+                <button>Enviar</button>
+            </form>
         </section>
-        <section class="main-menu">
-            <h1>Clinica Bastia</h1>
-            <div class="main-links">
-                <div class="main-link">
-                    <div class="rounded-image">
-                        <img src="img/main-menu/enfermedades.png" alt="enfermedades">
-                    </div>
-                    <a class="btn-primary" href="listado-enfermedades.html">Enfermedades</a>
-                </div>
-                <div class="main-link">
-                    <div class="rounded-image">
-                        <img src="img/main-menu/vacunas.png" alt="vacunas">
-                    </div>
-                    <a class="btn-primary" target="blank"
-                        href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion">VACUNAS</a>
-                </div>
-                <div class="main-link">
-                    <div class="rounded-image">
-                        <img src="img/main-menu/mapa-hospitales.png" alt="mapa hospitales">
-                    </div>
-                    <a class="btn-primary" href="mapa-hospitales.html">MAPA DE HOSPITALES</a>
-                </div>
-            </div>
+        <section class="datos-contacto">
+            <h2>Datos De Contacto</h2>
+            <ul>
+                <li>Dirección: Florencio Varela 1903, San Justo</li>
+                <li>Teléfono: (+5411) 4480-8900</li>
+                <li>Celular: (+5411) 4480-8900</li>
+                <li>Email: <a href="mailto:covid-19@unlam.edu.ar">covid-19@unlam.edu.ar</a></li>
+                <li>Web: <a href="https://www.unlam.edu.ar/" target="blank">www.unlam.edu.ar</a></li>
+            </ul>
         </section>
-        <section class="banner">
-            <div class="contendor">
-                <div>
-                    <h2>Si tenés sintomas de COVID-19</h2>
-                    <h3>LLAMÁ AL</h3>
-                </div>
-                <div class="llama">
-                    <img src="img/telefono.png" alt="telefono">
-                    <span>148</span>
-                </div>
-            </div>
+        <section class="ubicacion">
+            <h2>Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3740269052632!2d-58.56505924962148!3d-34.6705084684452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1601694899899!5m2!1ses!2sar"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
     </main>
     <footer class="contenedor">

@@ -1,0 +1,101 @@
+main section {
+  margin: 10px 0;
+}
+
+.hero-image {
+  background-image: url("../img/hero/mujer-barbijo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hero-image img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.main-menu {
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px 40px;
+}
+
+h2 {
+  color: #fff;
+}
+
+.main-menu .main-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.main-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  border: 2px #efefef solid;
+  background-color: #efefef;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.rounded-image img {
+  max-width: 120px;
+  padding: 20px;
+}
+
+.btn-primary {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #727270;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+.banner {
+  background-color: #8e8e8e;
+  color: #efefef;
+  padding: 40px 20px;
+}
+
+.banner h3 {
+  font-size: 4em;
+  margin: 20px 0;
+}
+
+.contendor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.llama img {
+  max-width: 100px;
+  filter: invert(0.8);
+}
+
+.llama span {
+  font-size: 9em;
+}

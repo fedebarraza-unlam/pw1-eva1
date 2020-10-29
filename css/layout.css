@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"); /*main*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"); /*h2*/
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/*HEADER*/
+header {
+  background-color: #0093d5;
+}
+header .contenedor {
+  padding: 20px 0;
+}
+.logo {
+  width: 25%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.logo a {
+  width: 100%;
+}
+.logo img {
+  width: 20%;
+  position: relative;
+  left: 50%;
+}
+.buscador {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}
+.buscador button {
+  background-color: white;
+  border: 0px;
+  padding-top: 10px;
+  border-radius: 0px 5px 5px 0px;
+  height: 40px;
+  width: 3.75%;
+  background-image: url("../img/search-24px.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.buscador input {
+  width: 80%;
+  box-sizing: border-box;
+  border: 0px;
+  height: 40px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+/*MENU*/
+nav {
+  background-color: #00aeff;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+}
+nav a:hover {
+  color: #0093d5;
+  background-color: #dcefff;
+}
+
+/*BODY*/
+body {
+  background-color: white;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+main {
+  max-width: 1440px; /* Dejar que se expanda hasta el ancho maximo  */
+  margin: auto;
+}
+
+main section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #0093d5;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  color: #0093d5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*FOOTER*/
+footer {
+  align-items: flex-start;
+  justify-content: space-around;
+  color: white;
+  background-color: rgb(36, 32, 32);
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: large;
+}
+footer h3 {
+  margin-bottom: 5%;
+  font-size: 1.3em;
+}
+aside {
+  margin-top: 10px;
+  width: calc(20% - 5%);
+}
+aside img {
+  width: calc(20% - 1%);
+}
+
+.datos-grupo ul {
+  list-style: none;
+}
+
+.datos-grupo ul li {
+  margin-bottom: 5px;
+}
+
+.menu-inferior a:hover {
+  text-decoration: underline;
+}
+aside img:hover {
+  -webkit-filter: invert(0.75);
+  filter: invert(0.75);
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 80%;
+  }
+}
