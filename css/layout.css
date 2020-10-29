@@ -131,16 +131,14 @@ footer h3 {
   margin-bottom: 5%;
   font-size: 1.3em;
 }
-div {
+aside {
   margin-top: 10px;
   width: calc(20% - 5%);
 }
-div img {
+aside img {
   width: calc(20% - 1%);
 }
-div a:hover{
-    text-decoration: overline;
-}
+
 .datos-grupo ul {
   list-style: none;
 }
@@ -152,7 +150,7 @@ div a:hover{
 .menu-inferior a:hover {
   text-decoration: underline;
 }
-div img:hover {
+aside img:hover {
   -webkit-filter: invert(0.75);
   filter: invert(0.75);
 }
