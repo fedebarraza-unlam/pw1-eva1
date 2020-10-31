@@ -198,4 +198,10 @@ footer ul li {
   main {
     width: 80%;
   }
+
+  .redes,
+  .datos-grupo,
+  .menu-inferior {
+    max-width: 180px;
+  }
 }
