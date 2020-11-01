@@ -85,3 +85,7 @@ form div {
 .select-sintoma p {
   width: 80%;
 }
+
+#mensaje {
+  height: 76px;
+}
