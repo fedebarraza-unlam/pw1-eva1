@@ -12,7 +12,7 @@ function mostrarOcultar(ocultar, valor){
     }
 }
 
-function contadorSintomas(tipoDeSintoma, id){
+function contadorSintomas(tipoDeSintoma){
     var tempSintoma = sintomas; 
     tipoDeSintoma = document.getElementsByName(tipoDeSintoma);
     for(i in tipoDeSintoma){
@@ -46,11 +46,11 @@ function validar(){
         mensajesError += "<p>El campo teléfono no cumple los requisitos</p>"
     }
 
-    contadorSintomas("fiebre", "1")
-    contadorSintomas("cabeza", "2")
-    contadorSintomas("tos", "3")
-    contadorSintomas("garganta", "4")
-    contadorSintomas("respirar", "5")
+    contadorSintomas("fiebre")
+    contadorSintomas("cabeza")
+    contadorSintomas("tos")
+    contadorSintomas("garganta")
+    contadorSintomas("respirar")
     
     if(sintomas<5){
         error = true;
