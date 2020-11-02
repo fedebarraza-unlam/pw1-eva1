@@ -79,6 +79,15 @@ h2 {
   padding: 40px 20px;
 }
 
+.banner aside {
+  margin-top: 10px;
+  width: calc(20% - 5%);
+}
+
+.banner aside img {
+  width: calc(20% - 1%);
+}
+
 .banner h3 {
   font-size: 4em;
   margin: 20px 0;

@@ -61,10 +61,11 @@ form div {
   padding: 5px 0px;
   width: calc(100% - 20px);
 }
-.error{
+.error {
   color: red;
 }
-#datos, #paises{
+#datos,
+#paises {
   display: none;
 }
 .select-sintoma {
@@ -85,4 +86,18 @@ form div {
 }
 .select-sintoma p {
   width: 80%;
+
+}
+
+#mensaje {
+  height: 76px;
+}
+
+#datos {
+  width: 100%;
+}
+
+#datos div {
+  width: calc(50% - 2px);
+  display: inline-block;
 }

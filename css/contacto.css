@@ -33,6 +33,19 @@ h2 {
   flex-wrap: nowrap;
 }
 
+.formulario-contacto .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contacto .form-group.error {
+  color: red;
+}
+
+.formulario-contacto .form-group.error input {
+  border-color: red;
+}
+
 .formulario-contacto form input {
   margin: 10px 0;
   padding: 5px;
