@@ -1,6 +1,7 @@
 var regexCampoNumerico=/^[0-9]+$/
 var regexCampoDNI=/^[0-9]{8}$/
 var positivos = 0;
+var sintomas = 0;
 
 function mostrarOcultar(ocultar, valor){
     if(valor){
@@ -11,19 +12,25 @@ function mostrarOcultar(ocultar, valor){
     }
 }
 
-function sintomaPositivo(){
-    positivos++;
+function contadorSintomas(tipoDeSintoma){
+    tipoDeSintoma = document.getElementsByName(tipoDeSintoma);
+    for(i in tipoDeSintoma){
+        if(tipoDeSintoma[i].checked){
+            if(tipoDeSintoma[i].value=='si'){
+                positivos++;
+                sintomas++;
+            }else{
+                sintomas++;
+            }
+        }
+    }
 }
 
 function validar(){
     var error = false;
     var mensajesError = "";
-    var sintomas = 0;
-    var sintomaActual;
-    console.log("hola");
     if(document.getElementById("nombre").value==''){
         error = true;
-        
         mensajesError += "<p>El campo nombre no puede estar vacío</p>"
     }
     if(!regexCampoDNI.test(document.getElementById("dni").value)){
@@ -32,43 +39,15 @@ function validar(){
     }
     if(!regexCampoNumerico.test(document.getElementById("tel").value)){
         error = true;
-        mensajesError += "<p>El campo teléfono no cumple los requisitos</p>";
+        mensajesError += "<p>El campo teléfono no cumple los requisitos</p>"
     }
 
-    sintomaActual = document.getElementsByName("fiebre");
-    for(i in sintomaActual){
-        if(sintomaActual[i].checked){
-            sintomas++;
-        }
-    }
-
-    sintomaActual = document.getElementsByName("cabeza");
-    for(i in sintomaActual){
-        if(sintomaActual[i].checked){
-            sintomas++;
-        }
-    }
-
-    sintomaActual = document.getElementsByName("tos");
-    for(i in sintomaActual){
-        if(sintomaActual[i].checked){
-            sintomas++;
-        }
-    }
-
-    sintomaActual = document.getElementsByName("garganta");
-    for(i in sintomaActual){
-        if(sintomaActual[i].checked){
-            sintomas++;
-        }
-    }
-
-    sintomaActual = document.getElementsByName("respirar");
-    for(i in sintomaActual){
-        if(sintomaActual[i].checked){
-            sintomas++;
-        }
-    }
+    contadorSintomas("fiebre")
+    contadorSintomas("cabeza")
+    contadorSintomas("tos")
+    contadorSintomas("garganta")
+    contadorSintomas("respirar")
+    
     if(sintomas<5){
         error = true;
         mensajesError+="<p>Debe seleccionar los síntomas</p>";
