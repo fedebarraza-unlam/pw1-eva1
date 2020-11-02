@@ -2,6 +2,7 @@ var regexCampoNumerico=/^[0-9]+$/
 var regexCampoDNI=/^[0-9]{8}$/
 var positivos = 0;
 var sintomas = 0;
+let formContacto;
 
 function mostrarOcultar(ocultar, valor){
     if(valor){
@@ -31,18 +32,24 @@ function validar(){
     var mensajesError = "";
     if(document.getElementById("nombre").value==''){
         error = true;
-        document.getElementById("nombre").style.borderColor="red";
+        grpNombre.classList.add("error");
         mensajesError += "<p>El campo nombre no puede estar vacío</p>"
+    }else{
+        grpNombre.classList.remove("error");
     }
     if(!regexCampoDNI.test(document.getElementById("dni").value)){
         error = true;
-        document.getElementById("dni").style.borderColor="red";
+        grpDni.classList.add("error");
         mensajesError += "<p>El campo DNI no cumple los requisitos</p>";
+    }else{
+        grpDni.classList.remove("error");
     }
     if(!regexCampoNumerico.test(document.getElementById("tel").value)){
         error = true;
-        document.getElementById("tel").style.borderColor="red";
+        grpTelefono.classList.add("error");
         mensajesError += "<p>El campo teléfono no cumple los requisitos</p>"
+    }else{
+        grpTelefono.classList.remove("error");
     }
 
     contadorSintomas("fiebre")
@@ -53,7 +60,7 @@ function validar(){
     
     if(sintomas<5){
         error = true;
-        mensajesError+="<p>Debe seleccionar los síntomas</p>";
+        mensajesError+="<p>Debe seleccionar todos los síntomas</p>";
     }
 
     if(error){
