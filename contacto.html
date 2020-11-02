@@ -48,21 +48,30 @@
     <main>
         <section class="formulario-contacto">
             <h2>Contacto</h2>
-            <form action="#" method="GET" onsubmit="validar()">
-                <label for="nombre">Nombre</label>
-                <input name="nombre" type="text" id="nombre">
-                <label for="Apellido">Apellido</label>
-                <input name="apellido" type="text" id="apellido">
-                <label for="tefono">Teléfono</label>
-                <input name="telefono" type="text" id="telefono" placeholder="0000-0000">
-                <label for="email">Email</label>
-                <input name="email" type="email" id="email" placeholder="ejemplo@ejemplo.com">
-                <label for="consulta">Consulta:</label>
-                <textarea name="consulta" id="consulta"  onkeyup="contarTeclas()" onkeypress="contarTeclas()" onkeydown="contarTeclas()"></textarea>
-                <label for="caracteresRestantes" class="caracteresRestantes">Caracteres disponibles:</label>
-                <input  type="text" id="caracteresRestantes" class="caracteresRestantes" disabled>
+            <form method="GET" onsubmit="return validar();">
+                <div id="grpNombre" class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre" type="text" id="nombre">
+                </div>
+                <div id="grpApellido" class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input name="apellido" type="text" id="apellido">
+                </div>
+                <div id="grpTelefono" class="form-group">
+                    <label for="tefono">Teléfono</label>
+                    <input name="telefono" type="text" id="telefono" placeholder="0000-0000">
+                </div>
+                <div id="grpEmail" class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="email" placeholder="ejemplo@ejemplo.com">
+                </div>
+                <div id="grpConsulta" class="form-group">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="consulta" id="consulta" onkeyup="contarTeclas()" onkeypress="contarTeclas()"
+                        onkeydown="contarTeclas()"></textarea>
+                    <p class="caracteresRestantes">Caracteres disponibles: <span id="caracteresRestantes"></span></p>
+                </div>
                 <div id="mensaje" class="error">
-
                 </div>
                 <button>Enviar</button>
             </form>
@@ -85,9 +94,9 @@
                 frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
     </main>
-    <footer class="contenedor">
-        <aside>
-            <small class="datos-grupo">
+    <footer>
+        <div class="datos-grupo">
+            <small>
                 <h3>Datos del grupo:</h3>
                 <ul>
                     <li>Surace Lucas - 43202347</li>
@@ -95,33 +104,45 @@
                     <li>Damian Marin - 38130107</li>
                 </ul>
             </small>
-        </aside>
-        <aside>
-            <small class="menu-inferior">
+        </div>
+        <div class="menu-inferior">
+            <small>
                 <h3>Menu inferior: </h3>
-                <a href="listado-enfermedades.html">Enfermedades</a><br>
-                <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
-                    target="blank">Vacunas</a><br>
-                <a href="mapa-hospitales.html">Hospitales</a><br>
-                <a href="contacto.html">Contacto</a>
+                <ul>
+                    <li>
+                        <a href="listado-enfermedades.html">Enfermedades</a></li>
+                    <li>
+                        <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
+                            target="blank">Vacunas</a>
+                    </li>
+                    <li>
+                        <a href="mapa-hospitales.html">Hospitales</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
             </small>
-        </aside>
-        <aside>
+        </div>
+        <div class="redes">
             <small>
                 <h3>Redes sociales:</h3>
-                <a href="https://www.facebook.com/UnlamOficial/" target="blank">
-                    <img src="img/facebook-brands.svg" alt="Ícono de Facebook">
-                </a>
-                <a href="https://twitter.com/UnlamOficial/" target="blank">
-                    <img src="img/twitter-brands.svg" alt="Ícono de Twitter">
-                </a>
-                <a href="https://www.instagram.com/unlamoficial/" target="blank">
-                    <img src="img/instagram-brands.svg" alt="Ícono de Instagram">
-                </a>
+                <div class="iconos">
+                    <a href="https://www.facebook.com/UnlamOficial/" target="blank">
+                        <img src="img/facebook-brands.svg" alt="Ícono de Facebook">
+                    </a>
+                    <a href="https://twitter.com/UnlamOficial/" target="blank">
+                        <img src="img/twitter-brands.svg" alt="Ícono de Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/unlamoficial/" target="blank">
+                        <img src="img/instagram-brands.svg" alt="Ícono de Instagram">
+                    </a>
+                </div>
             </small>
-        </aside>
+        </div>
     </footer>
-<script src="js/contacto.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 
 </html>
