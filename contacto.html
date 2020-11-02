@@ -48,22 +48,30 @@
     <main>
         <section class="formulario-contacto">
             <h2>Contacto</h2>
-            <form action="#" method="GET" onsubmit="validar()">
-                <label for="nombre">Nombre</label>
-                <input name="nombre" type="text" id="nombre">
-                <label for="Apellido">Apellido</label>
-                <input name="apellido" type="text" id="apellido">
-                <label for="tefono">Teléfono</label>
-                <input name="telefono" type="text" id="telefono" placeholder="0000-0000">
-                <label for="email">Email</label>
-                <input name="email" type="email" id="email" placeholder="ejemplo@ejemplo.com">
-                <label for="consulta">Consulta:</label>
-                <textarea name="consulta" id="consulta" onkeyup="contarTeclas()" onkeypress="contarTeclas()"
-                    onkeydown="contarTeclas()"></textarea>
-                <label for="caracteresRestantes" class="caracteresRestantes">Caracteres disponibles:</label>
-                <input type="text" id="caracteresRestantes" class="caracteresRestantes" disabled>
+            <form method="GET" onsubmit="return validar();">
+                <div id="grpNombre" class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre" type="text" id="nombre">
+                </div>
+                <div id="grpApellido" class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input name="apellido" type="text" id="apellido">
+                </div>
+                <div id="grpTelefono" class="form-group">
+                    <label for="tefono">Teléfono</label>
+                    <input name="telefono" type="text" id="telefono" placeholder="0000-0000">
+                </div>
+                <div id="grpEmail" class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="email" placeholder="ejemplo@ejemplo.com">
+                </div>
+                <div id="grpConsulta" class="form-group">
+                    <label for="consulta">Consulta:</label>
+                    <textarea name="consulta" id="consulta" onkeyup="contarTeclas()" onkeypress="contarTeclas()"
+                        onkeydown="contarTeclas()"></textarea>
+                    <p class="caracteresRestantes">Caracteres disponibles: <span id="caracteresRestantes"></span></p>
+                </div>
                 <div id="mensaje" class="error">
-
                 </div>
                 <button>Enviar</button>
             </form>
@@ -133,6 +141,7 @@
             </small>
         </div>
     </footer>
+    <script src="js/forms.js"></script>
     <script src="js/contacto.js"></script>
 </body>
 

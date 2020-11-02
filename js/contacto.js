@@ -1,42 +1,89 @@
-var regexCampoEmail=/^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/
-var regexCampoTelefonoConSigno = /^[0-9]{4}\-[0-9]{4}$/
-var regexCampoTelefono = /^[0-9]{8}$/
-var maxLenght = 1000;
-document.getElementById("caracteresRestantes").value = maxLenght;
+const maxLenght = 200;
 
-function contarTeclas(){
-    var textArea = document.getElementById("consulta");
-    if(textArea.value.length > maxLenght){
-        textArea.value = textArea.value.substring(0, maxLenght);
-    }else{
-        document.getElementById("caracteresRestantes").value = maxLenght - textArea.value.length;
+let formContacto;
+
+function contarTeclas() {
+    const length = formContacto.txtConsulta.value.length;
+    if (length > maxLenght) {
+        formContacto.txtConsulta.value = textArea.value.substring(0, maxLenght);
+    } else {
+        let caracteresRestantes = maxLenght - length;
+        formContacto.caracteresRestantes.innerHTML = caracteresRestantes;
+        if (caracteresRestantes < 50) {
+            formContacto.caracteresRestantes.classList.add("error");
+        } else {
+            formContacto.caracteresRestantes.classList.remove("error");
+        }
     }
 }
 
-function validar(){
-    var error = false;
-    var mensajesError = "";
-    if(document.getElementById("nombre").value==''){
-        error = true;
-        mensajesError += "<p>El campo nombre no puede estar vacío</p>"
+function validar() {
+    let mensajesError = '';
+
+    if (formContacto.txtNombre.value == '') {
+        mensajesError += "<p>El campo Nombre no puede estar vacío</p>";
+        formContacto.grpNombre.classList.add("error");
+    } else {
+        formContacto.grpNombre.classList.remove("error");
     }
-    if(document.getElementById("apellido").value==''){
-        error = true;
-        mensajesError+= "<p>El campo Apellido no puede estar vacío</p>"
+
+    if (formContacto.txtApellido.value == '') {
+        mensajesError += "<p>El campo Apellido no puede estar vacío</p>"
+        formContacto.grpApellido.classList.add("error");
+    } else {
+        formContacto.grpApellido.classList.remove("error");
     }
-    if(!regexCampoTelefonoConSigno.test(document.getElementById("telefono").value) && !regexCampoTelefono.test(document.getElementById("telefono").value) ){
-        error = true;
+
+    if (validarTelefono(formContacto.txtTelefono.value)) {
         mensajesError += "<p>El campo Telefono no cumple con su formato</p>";
+        formContacto.grpTelefono.classList.add("error");
+    } else {
+        formContacto.grpTelefono.classList.remove("error");
     }
-    if(!regexCampoEmail.test(document.getElementById("email").value)){
-        error = true;
+
+    if (validarEmail(formContacto.txtEmail.value)) {
         mensajesError += "<p>El campo Email no cumple con su formato</p>";
+        formContacto.grpEmail.classList.add("error");
+    } else {
+        formContacto.grpEmail.classList.remove("error");
     }
-    if(error){
-        document.getElementById("mensaje").innerHTML=mensajesError;
+
+    if (mensajesError) {
+        formContacto.mensaje.innerHTML = mensajesError;
         return false;
     }
-    if(!error){
-        return false;
-    }
+
+    return true;
 }
+
+function iniciar() {
+    formContacto = {};
+
+    // Set Nombre
+    formContacto.grpNombre = document.getElementById("grpNombre");
+    formContacto.txtNombre = document.getElementById("nombre");
+
+    // Set Apellido
+    formContacto.grpApellido = document.getElementById("grpApellido");
+    formContacto.txtApellido = document.getElementById("apellido");
+
+    // Set Telefono
+    formContacto.grpTelefono = document.getElementById("grpTelefono");
+    formContacto.txtTelefono = document.getElementById("telefono");
+
+    // Set Email
+    formContacto.grpEmail = document.getElementById("grpEmail");
+    formContacto.txtEmail = document.getElementById("email");
+
+    // Set Consulta
+    formContacto.txtConsulta = document.getElementById("consulta");
+    formContacto.caracteresRestantes = document.getElementById("caracteresRestantes");
+
+    // Set Mensaje
+    formContacto.mensaje = document.getElementById("mensaje");
+
+    // Valores predefinidos
+    formContacto.caracteresRestantes.innerHTML = maxLenght;
+}
+
+iniciar();
