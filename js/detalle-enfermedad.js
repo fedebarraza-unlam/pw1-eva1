@@ -12,7 +12,8 @@ function mostrarOcultar(ocultar, valor){
     }
 }
 
-function contadorSintomas(tipoDeSintoma){
+function contadorSintomas(tipoDeSintoma, id){
+    var tempSintoma = sintomas; 
     tipoDeSintoma = document.getElementsByName(tipoDeSintoma);
     for(i in tipoDeSintoma){
         if(tipoDeSintoma[i].checked){
@@ -31,22 +32,25 @@ function validar(){
     var mensajesError = "";
     if(document.getElementById("nombre").value==''){
         error = true;
+        document.getElementById("nombre").style.borderColor="red";
         mensajesError += "<p>El campo nombre no puede estar vacío</p>"
     }
     if(!regexCampoDNI.test(document.getElementById("dni").value)){
         error = true;
+        document.getElementById("dni").style.borderColor="red";
         mensajesError += "<p>El campo DNI no cumple los requisitos</p>";
     }
     if(!regexCampoNumerico.test(document.getElementById("tel").value)){
         error = true;
+        document.getElementById("tel").style.borderColor="red";
         mensajesError += "<p>El campo teléfono no cumple los requisitos</p>"
     }
 
-    contadorSintomas("fiebre")
-    contadorSintomas("cabeza")
-    contadorSintomas("tos")
-    contadorSintomas("garganta")
-    contadorSintomas("respirar")
+    contadorSintomas("fiebre", "1")
+    contadorSintomas("cabeza", "2")
+    contadorSintomas("tos", "3")
+    contadorSintomas("garganta", "4")
+    contadorSintomas("respirar", "5")
     
     if(sintomas<5){
         error = true;
