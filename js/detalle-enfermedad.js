@@ -2,7 +2,6 @@ var regexCampoNumerico=/^[0-9]+$/
 var regexCampoDNI=/^[0-9]{8}$/
 var positivos = 0;
 var sintomas = 0;
-let formContacto;
 
 function mostrarOcultar(ocultar, valor){
     if(valor){
