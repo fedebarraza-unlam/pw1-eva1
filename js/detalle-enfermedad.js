@@ -13,7 +13,6 @@ function mostrarOcultar(ocultar, valor){
 }
 
 function contadorSintomas(tipoDeSintoma){
-    var tempSintoma = sintomas; 
     tipoDeSintoma = document.getElementsByName(tipoDeSintoma);
     for(i in tipoDeSintoma){
         if(tipoDeSintoma[i].checked){
