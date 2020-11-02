@@ -85,3 +85,12 @@ form div {
 .select-sintoma p {
   width: 80%;
 }
+
+#datos {
+  width: 100%;
+}
+
+#datos div {
+  width: calc(50% - 2px);
+  display: inline-block;
+}
