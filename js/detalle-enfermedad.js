@@ -71,11 +71,22 @@ function validar() {
 
     formDetalle.mensaje.classList.remove("error");
     formDetalle.mensaje.innerHTML = "<p>El formulario fue completado correctamente. " + positivos + " síntomas de COVID-19 fueron registrados</p>";
+    limpiarFormDespuesDeSuccess();
     return false;
 }
 
 function limpiarForm() {
     formDetalle.mensaje.innerHTML = '';
+    positivos = 0;
+    sintomas = 0;
+}
+
+function limpiarFormDespuesDeSuccess() {
+    formDetalle.txtNombre.value = "";
+    formDetalle.txtDni.value = "";
+    formDetalle.txtTelefono.value = "";
+    formDetalle.txtCiudad.value = "";
+    formDetalle.txtDireccion.value = "";
     positivos = 0;
     sintomas = 0;
 }
@@ -94,6 +105,12 @@ function iniciar() {
     // Set Telefono
     formDetalle.grpTelefono = document.getElementById("grpTelefono");
     formDetalle.txtTelefono = document.getElementById("tel");
+
+    // Set Ciudad
+    formDetalle.txtCiudad = document.getElementById("ciudad");
+
+    // Set Direccion
+    formDetalle.txtDireccion = document.getElementById("direccion");
 
     // Set Mensaje
     formDetalle.mensaje = document.getElementById("mensaje");

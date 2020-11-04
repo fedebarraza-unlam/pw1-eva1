@@ -51,16 +51,28 @@ function validar() {
     }
 
     if (mensajesError) {
+        formContacto.mensaje.classList.add("error");
         formContacto.mensaje.innerHTML = mensajesError;
         return false;
     }
 
-    alert("El formulario fue enviado correctamente.");
-    return true;
+    formContacto.mensaje.classList.remove("error");
+    formContacto.mensaje.innerHTML = "El formulario fue enviado correctamente.";
+    limpiarFormDespuesDeSuccess();
+    return false;
 }
 
 function limpiarForm() {
     formContacto.mensaje.innerHTML = '';
+}
+
+function limpiarFormDespuesDeSuccess() {
+    formContacto.txtNombre.value = "";
+    formContacto.txtApellido.value = "";
+    formContacto.txtTelefono.value = "";
+    formContacto.txtEmail.value = "";
+    formContacto.txtConsulta.value = "";
+    formContacto.caracteresRestantes.innerHTML = maxLenght;
 }
 
 function iniciar() {
