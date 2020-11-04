@@ -20,6 +20,8 @@ function contarTeclas() {
 function validar() {
     let mensajesError = '';
 
+    limpiarForm();
+
     if (formContacto.txtNombre.value == '') {
         mensajesError += "<p>El campo Nombre no puede estar vacío</p>";
         formContacto.grpNombre.classList.add("error");
@@ -53,7 +55,12 @@ function validar() {
         return false;
     }
 
+    alert("El formulario fue enviado correctamente.");
     return true;
+}
+
+function limpiarForm() {
+    formContacto.mensaje.innerHTML = '';
 }
 
 function iniciar() {
