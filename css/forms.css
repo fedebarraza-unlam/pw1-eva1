@@ -63,6 +63,7 @@ form div {
 .error {
   color: red;
 }
+
 #datos,
 #paises {
   display: none;

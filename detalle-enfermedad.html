@@ -92,7 +92,7 @@
                 </div>
             </article>
             <article>
-                <form action="#" onsubmit="validar()">
+                <form action="#" onsubmit="return validar()">
                     <div class="input-100">
                         <label for="nombre">Nombre y Apellido</label><br>
                         <input type="text" id="nombre" name="nombre" class="input">
@@ -194,6 +194,8 @@
                         </div>
                     </div>
                     <div id="mensaje" class="error">
+                    </div>
+                    <div id="mensaje" class="mensaje">
                     </div>
                     <div id="boton">
                         <button>ENVIAR TEST</button>
