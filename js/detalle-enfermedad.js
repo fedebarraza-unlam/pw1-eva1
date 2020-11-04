@@ -31,15 +31,24 @@ function validar(){
     var mensajesError = "";
     if(document.getElementById("nombre").value==''){
         error = true;
+        grpNombre.classList.add("error");
         mensajesError += "<p>El campo nombre no puede estar vacío</p>"
+    }else{
+        grpNombre.classList.remove("error");
     }
     if(!regexCampoDNI.test(document.getElementById("dni").value)){
         error = true;
+        grpDni.classList.add("error");
         mensajesError += "<p>El campo DNI no cumple los requisitos</p>";
+    }else{
+        grpDni.classList.remove("error");
     }
     if(!regexCampoNumerico.test(document.getElementById("tel").value)){
         error = true;
+        grpTelefono.classList.add("error");
         mensajesError += "<p>El campo teléfono no cumple los requisitos</p>"
+    }else{
+        grpTelefono.classList.remove("error");
     }
 
     contadorSintomas("fiebre")
@@ -50,7 +59,7 @@ function validar(){
     
     if(sintomas<5){
         error = true;
-        mensajesError+="<p>Debe seleccionar los síntomas</p>";
+        mensajesError+="<p>Debe seleccionar todos los síntomas</p>";
     }
 
     if(error){
