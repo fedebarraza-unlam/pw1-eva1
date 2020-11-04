@@ -63,10 +63,13 @@ function validar(){
     }
 
     if(error){
+        document.getElementById("mensaje").style.color="red";
         document.getElementById("mensaje").innerHTML=mensajesError;
         return false;
     }else{
-        alert("El formulario fue completado correctamente. " +positivos+ " síntomas de COVID-19 fueron registrados");
+        var mensaje = "El formulario fue completado correctamente. " +positivos+ " síntomas de COVID-19 fueron registrados"; 
+        document.getElementById("mensaje").style.color="green";
+        document.getElementById("mensaje").innerHTML=mensaje;
         return false;
     }
 }
