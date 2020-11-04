@@ -64,12 +64,14 @@ function validar() {
     }
 
     if (mensajesError) {
-        document.getElementById("mensaje").innerHTML = mensajesError;
+        formDetalle.mensaje.classList.add("error");
+        formDetalle.mensaje.innerHTML = mensajesError;
         return false;
     }
 
-    alert("El formulario fue completado correctamente. " + positivos + " síntomas de COVID-19 fueron registrados");
-    return true;
+    formDetalle.mensaje.classList.remove("error");
+    formDetalle.mensaje.innerHTML = "<p>El formulario fue completado correctamente. " + positivos + " síntomas de COVID-19 fueron registrados</p>";
+    return false;
 }
 
 function limpiarForm() {

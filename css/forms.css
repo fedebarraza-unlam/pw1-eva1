@@ -75,9 +75,6 @@ form div {
   padding: 5px 0px;
   width: calc(100% - 20px);
 }
-.error {
-  color: red;
-}
 
 #datos,
 #paises {
@@ -106,6 +103,14 @@ form div {
 
 #mensaje {
   height: 76px;
+}
+
+.mensaje {
+  color: green;
+}
+
+.error {
+  color: red;
 }
 
 #datos {
