@@ -36,6 +36,7 @@ form select {
   border-style: solid;
   border-radius: 5px;
   margin: 2px 0px;
+  text-indent: 5px;
 }
 
 form textarea,
@@ -56,6 +57,20 @@ form div {
 .input-50 {
   width: 50%;
 }
+
+.input-100.error {
+  color: red;
+}
+.input-100.error input{
+  border-color: red;
+}
+.input-50.error {
+  color: red;
+}
+.input-50.error input {
+  border-color: red;
+}
+
 .input {
   padding: 5px 0px;
   width: calc(100% - 20px);
@@ -86,6 +101,7 @@ form div {
 }
 .select-sintoma p {
   width: 80%;
+
 }
 
 #mensaje {

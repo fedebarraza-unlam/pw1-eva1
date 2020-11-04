@@ -93,15 +93,15 @@
             </article>
             <article>
                 <form action="#" onsubmit="return validar()">
-                    <div class="input-100">
+                    <div id="grpNombre" class="input-100">
                         <label for="nombre">Nombre y Apellido</label><br>
                         <input type="text" id="nombre" name="nombre" class="input">
                     </div>
-                    <div class="input-50">
+                    <div id="grpDni" class="input-50">
                         <label for="dni">DNI</label><br>
                         <input type="text" id="dni" name="dni" class="input"><br>
                     </div>
-                    <div class="input-50">
+                    <div id="grpTelefono" class="input-50">
                         <label for="tel">Teléfono</label><br>
                         <input type="tel" id="tel" name="tel" class="input">
                     </div>
@@ -148,39 +148,37 @@
                         <p>¿Tuviste Fiebre mayor a 38 grados?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="fiebre" id="si" value="si" onclick="sintomaPositivo()">
+                            <input type="radio" name="fiebre" id="si" value="si">
                             <label for="no">No</label>
                             <input type="radio" name="fiebre" id="no" value="no">
                         </div>
                         <p>¿Tuviste Dolor de cabeza?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="cabeza" id="si" value="si" onclick="sintomaPositivo()">
+                            <input type="radio" name="cabeza" id="si" value="si">
                             <label for="no">No</label>
                             <input type="radio" name="cabeza" id="no" value="no">
                         </div>
                         <p>¿Tuviste una tos presistente?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="tos" id="si" value="si" onclick="sintomaPositivo()">
+                            <input type="radio" name="tos" id="si" value="si">
                             <label for="no">No</label>
                             <input type="radio" name="tos" id="no" value="no">
                         </div>
                         <p>¿Tuviste Dolor de garganta?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="garganta" id="si" value="si" onclick="sintomaPositivo()">
+                            <input type="radio" name="garganta" id="si" value="si">
                             <label for="no">No</label>
                             <input type="radio" name="garganta" id="no" value="no">
                         </div>
                         <p>¿Tuviste Dificultad para respirar?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="respirar" id="si" value="si"
-                                onclick="mostrarOcultar('datos', true), sintomaPositivo()">
+                            <input type="radio" name="respirar" id="si" value="si" onclick="mostrarOcultar('datos', true)">
                             <label for="no">No</label>
-                            <input type="radio" name="respirar" id="no" value="no"
-                                onclick="mostrarOcultar('datos', false)">
+                            <input type="radio" name="respirar" id="no" value="no" onclick="mostrarOcultar('datos', false)">
                         </div>
                     </div>
                     <div id="datos">
