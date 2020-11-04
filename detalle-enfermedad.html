@@ -81,7 +81,8 @@
                     deberías hacer un control y seguimiento diario de tus síntomas.</P>
                 <p>Esta aplicación te permitirá hacer un seguimiento de la evolución de los síntomas y te dará las
                     indicaciones y consejos a seguir en cada caso. El uso de este servicio supone la aceptación de los
-                    términos y la política de privacidad descritos en <a href="index.html">Ver las condiciones y políticas</a></p>
+                    términos y la política de privacidad descritos en <a href="index.html">Ver las condiciones y
+                        políticas</a></p>
                 <h3>SINTOMAS</h3>
                 <div class="sintomas-img">
                     <img src="img/detalle-enfermedad/24-fiebre-dolor-garganta.png" alt="fiebre y dolor de garganta">
@@ -91,16 +92,16 @@
                 </div>
             </article>
             <article>
-                <form action="#">
-                    <div class="input-100">
+                <form method="GET" onsubmit="return validar();">
+                    <div id="grpNombre" class="input-100">
                         <label for="nombre">Nombre y Apellido</label><br>
                         <input type="text" id="nombre" name="nombre" class="input">
                     </div>
-                    <div class="input-50">
+                    <div id="grpDni" class="input-50">
                         <label for="dni">DNI</label><br>
                         <input type="text" id="dni" name="dni" class="input"><br>
                     </div>
-                    <div class="input-50">
+                    <div id="grpTelefono" class="input-50">
                         <label for="tel">Teléfono</label><br>
                         <input type="tel" id="tel" name="tel" class="input">
                     </div>
@@ -118,25 +119,29 @@
                     <div class="input-100">
                         <p>¿Has viajado al exterior de la Republica Argentina?
                             <label for="si">Si</label>
-                            <input type="radio" name="viajo" id="si" value="si">
+                            <input type="radio" name="viajo" id="si" value="si"
+                                onclick="mostrarOcultar('paises', true)">
                             <label for="no">No</label>
-                            <input type="radio" name="viajo" id="no" value="no">
+                            <input type="radio" name="viajo" id="no" value="no"
+                                onclick="mostrarOcultar('paises', false)">
                         </p>
-                        <label for="pises">Paises Visitados</label>
-                        <select name="paises" id="paises" class="input-50">
-                            <option value></option>
-                            <option value="1">Uruguay</option>
-                            <option value="2">Chile</option>
-                            <option value="3">Brasil</option>
-                            <option value="2">Paraguay</option>
-                            <option value="2">Bolivia</option>
-                            <option value="2">Peru</option>
-                            <option value="2">Norteamerica</option>
-                            <option value="2">Europa</option>
-                            <option value="2">Asia</option>
-                            <option value="2">Africa</option>
-                            <option value="2">Otro</option>
-                        </select>
+                        <div id="paises">
+                            <label for="paises">Paises Visitados</label>
+                            <select name="paises" class="input-50">
+                                <option value></option>
+                                <option value="1">Uruguay</option>
+                                <option value="2">Chile</option>
+                                <option value="3">Brasil</option>
+                                <option value="2">Paraguay</option>
+                                <option value="2">Bolivia</option>
+                                <option value="2">Peru</option>
+                                <option value="2">Norteamerica</option>
+                                <option value="2">Europa</option>
+                                <option value="2">Asia</option>
+                                <option value="2">Africa</option>
+                                <option value="2">Otro</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="select-sintoma">
                         <h4>Por favor, indica los sintomas que presentas:</h4>
@@ -171,18 +176,22 @@
                         <p>¿Tuviste Dificultad para respirar?</p>
                         <div>
                             <label for="si">Si</label>
-                            <input type="radio" name="respirar" id="si" value="si">
+                            <input type="radio" name="respirar" id="si" value="si" onclick="mostrarOcultar('datos', true)">
                             <label for="no">No</label>
-                            <input type="radio" name="respirar" id="no" value="no">
+                            <input type="radio" name="respirar" id="no" value="no" onclick="mostrarOcultar('datos', false)">
                         </div>
                     </div>
-                    <div class="input-50">
-                        <label for="direccion">Direccion</label><br>
-                        <input type="text" id="direccion" name="direccion" class="input">
+                    <div id="datos">
+                        <div>
+                            <label for="direccion">Direccion</label><br>
+                            <input type="text" id="direccion" name="direccion" class="input">
+                        </div>
+                        <div>
+                            <label for="ciudad">Ciudad</label><br>
+                            <input type="text" id="ciudad" name="ciudad" class="input">
+                        </div>
                     </div>
-                    <div class="input-50">
-                        <label for="ciudad">Ciudad</label><br>
-                        <input type="text" id="ciudad" name="ciudad" class="input">
+                    <div id="mensaje" class="mensaje error">
                     </div>
                     <div id="boton">
                         <button>ENVIAR TEST</button>
@@ -227,9 +236,9 @@
             </article>
         </section>
     </main>
-    <footer class="contenedor">
-        <aside>
-            <small class="datos-grupo">
+    <footer>
+        <div class="datos-grupo">
+            <small>
                 <h3>Datos del grupo:</h3>
                 <ul>
                     <li>Surace Lucas - 43202347</li>
@@ -237,29 +246,44 @@
                     <li>Damian Marin - 38130107</li>
                 </ul>
             </small>
-        </aside>
-        <aside>
-            <small class="menu-inferior">
+        </div>
+        <div class="menu-inferior">
+            <small>
                 <h3>Menu inferior: </h3>
-                <a href="listado-enfermedades.html">Enfermedades</a><br>
-                <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
-                    target="blank">Vacunas</a><br>
-                <a href="mapa-hospitales.html">Hospitales</a><br>
-                <a href="contacto.html">Contacto</a>
+                <ul>
+                    <li>
+                        <a href="listado-enfermedades.html">Enfermedades</a></li>
+                    <li>
+                        <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
+                            target="blank">Vacunas</a>
+                    </li>
+                    <li>
+                        <a href="mapa-hospitales.html">Hospitales</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
             </small>
-        </aside>
-        <aside>
+        </div>
+        <div class="redes">
             <small>
                 <h3>Redes sociales:</h3>
-                <a href="https://www.facebook.com/UnlamOficial/" target="blank"><img src="img/facebook-brands.svg"
-                        alt="Ícono de Facebook"></a>
-                <a href="https://twitter.com/UnlamOficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                    target="blank"><img src="img/twitter-brands.svg" alt="Ícono de Twitter"></a>
-                <a href="https://www.instagram.com/unlamoficial/?hl=es-la" target="blank"><img
-                        src="img/instagram-brands.svg" alt="Ícono de Instagram"></a>
+                <div class="iconos">
+                    <a href="https://www.facebook.com/UnlamOficial/" target="blank">
+                        <img src="img/facebook-brands.svg" alt="Ícono de Facebook">
+                    </a>
+                    <a href="https://twitter.com/UnlamOficial/" target="blank">
+                        <img src="img/twitter-brands.svg" alt="Ícono de Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/unlamoficial/" target="blank">
+                        <img src="img/instagram-brands.svg" alt="Ícono de Instagram">
+                    </a>
+                </div>
             </small>
-        </aside>
+        </div>
     </footer>
+    <script src="js/detalle-enfermedad.js"></script>
 </body>
 
 </html>
