@@ -3,6 +3,10 @@
 }
 
 .buscador-enfermedades {
+  padding: 10px;
+}
+
+.buscador-enfermedades article {
   display: flex;
   align-items: center;
   width: 100%;
@@ -18,6 +22,7 @@
   background-image: url("../img/search-24px.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  min-width: 60px;
 }
 .buscador-enfermedades input {
   font-size: 20px;
