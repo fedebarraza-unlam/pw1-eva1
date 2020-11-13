@@ -113,9 +113,9 @@ h2 {
   flex-direction: row;
   width: 100%;
 }
-a {
+.menu-inferior a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /*FOOTER*/
