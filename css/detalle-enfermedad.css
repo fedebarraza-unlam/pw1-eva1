@@ -34,7 +34,7 @@ h4 {
   box-sizing: border-box;
 } 
 .detalle-main article{
-  margin: 0px 20px;
+  margin: 20px 20px 0px 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -53,9 +53,6 @@ h4 {
 }
 .detalle-main a:hover {
   text-decoration: underline;
-}
-.detalle-main h2{
-  margin: 15px;
 }
 .sintomas-img {
   display: flex;
@@ -127,14 +124,17 @@ h4 {
     width: calc(50% - 40px);
   }
   .detalle-main article{
+    margin: 0px 20px;
     width: calc(50% - 40px);
     box-sizing: border-box;
   }
 }
-@media (min-width: 425px){
+@media (max-width: 768px){
   .detalle-main h2{
-    margin: 30px;
+    margin: 15px 15px 0px 15px;
   }
+}
+@media (min-width: 425px){
   .sintomas-img img {
     margin: 0px 50px;
     width: calc(50% - 100px);
