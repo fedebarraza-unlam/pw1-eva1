@@ -1,17 +1,131 @@
 main section {
   max-width: 1320px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
-  margin-bottom: 50px;
+  padding-bottom: 1em;
 }
 
 .mapa {
-  height: 500px;
+  height: 250px;
 }
 
 .mapa iframe {
   width: 100%;
   height: 100%;
+}
+
+h2{
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.listado{
+  margin-top: 1em;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.item{
+  margin: 0.5em 0.2em 0em 0.2em;
+  cursor: pointer;
+  border-radius: 1.2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #00aeff;
+  color: white;
+}
+
+.popup{
+  display: none;
+  text-align: left;
+  position: fixed;
+  width: 50%;
+  height: 10em;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  border: 0.2em solid white;
+  border-radius: 1em;
+  background-color: #00aeff;
+  color: white;
+  padding: 1em;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.75)
+}
+
+.popup p{
+  margin-bottom: 5px;
+}
+
+.cerrar{
+  background-image: url("/img/close.svg");
+  background-size: contain;
+  background-color: white;
+  border: 0.15em solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 3;
+  -webkit-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 768px) {
+  .mapa {
+    height: 400px;
+    margin-bottom: 1em;
+  }
+
+  .listado{
+    width: 80%;
+    margin-top: 2em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .item{
+    margin: 0em;
+    padding: 0.5em 1em 0.5em 1em;
+  }
+
+  .popup{
+    margin: auto;
+    width: 20em;
+    height: 4em;
+    top: 50vh;
+    right: 50vh;
+    margin-top: -4em;
+    margin-right: -10em;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  main section {
+    padding-bottom: 2em;
+    height: 100%;
+  }
+  .mapa {
+    height: 500px;
+  }
+
+  .popup{
+    width: 20em;
+    height: 6em;
+  }
+
+  .popup p{
+    font-size: large;
+  }
 }
 
 @media (min-width: 1440px) {

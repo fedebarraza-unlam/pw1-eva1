@@ -65,6 +65,7 @@ h4 {
 }
 
 .imagenes-medidas {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -72,21 +73,28 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
-  margin: 0;
+  width: 85%;
+  margin: auto;
 }
 .imagenes-medidas article ul {
   list-style: none;
 }
 .imagenes-medidas article img {
-  width: calc(25% - 40px);
+  width: calc(50% - 0.2em);
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 .info-mapa {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.informacion-hospital, .mapa {
+  width: 100%;
+}
+
 .informacion-hospital h3 {
   color: #0093d5;
 }
@@ -98,15 +106,44 @@ h4 {
   margin-bottom: 5px;
 }
 .informacion-hospital img {
-  width: 350px;
+  width: 100%;
 }
-.mapa iframe {
+
+
+.informacion-hospital iframe {
+  margin-top: 0.25em;
   width: 100%;
   height: 100%;
 }
 
 #mensaje {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .imagenes-medidas article img{
+    width: calc(33% - 0.2em);
+  }
+
+  .info-mapa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+  }
+
+  .informacion-hospital {
+    width: calc(45% - 0.5em);
+  }
+
+  .informacion-hospital iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacion-hospital img {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -117,4 +154,14 @@ h4 {
   .image-text article {
     width: calc(50% - 40px);
   }
+
+  .imagenes-medidas article img {
+    width: calc(25% - 40px);
+    margin-bottom: 20px;
+  }
+
+  .informacion-hospital {
+    justify-content: space-between;
+  }
+
 }
