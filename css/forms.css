@@ -100,7 +100,6 @@ form div {
   width: 80%;
 
 }
-
 #mensaje {
   height: 76px;
 }
@@ -120,4 +119,43 @@ form div {
 #datos div {
   width: calc(50% - 2px);
   display: inline-block;
+}
+@media (max-width: 1024px){
+  .select-sintoma{
+    width: 80%;
+  }
+}
+@media (max-width: 425px){
+  .select-sintoma{
+    width: 100%;
+  }
+  .input-50 {
+    width: 100%;
+  }
+  #datos .input-50{
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px){
+  .select-sintoma div {
+    text-align: left;
+    width: 100%;
+  }
+  .select-sintoma p {
+    width: 100%;
+  }
+
+}
+@media (min-width: 768px){
+  .si-no {
+    margin: 5px 10px 0px 10px
+  }
+  .viaje-exterior{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #paises{
+    width: 100%;
+  }
 }

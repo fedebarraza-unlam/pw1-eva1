@@ -116,15 +116,16 @@
                         <label for="femenino">F</label>
                         <input type="radio" name="sexo" id="masc" value="f">
                     </div>
-                    <div class="input-100">
-                        <p>¿Has viajado al exterior de la Republica Argentina?
+                    <div class="viaje-exterior">
+                        <p>¿Has viajado al exterior de la Republica Argentina?</p>
+                        <div class="si-no">
                             <label for="si">Si</label>
                             <input type="radio" name="viajo" id="si" value="si"
                                 onclick="mostrarOcultar('paises', true)">
                             <label for="no">No</label>
                             <input type="radio" name="viajo" id="no" value="no"
                                 onclick="mostrarOcultar('paises', false)">
-                        </p>
+                        </div>
                         <div id="paises">
                             <label for="paises">Paises Visitados</label>
                             <select name="paises" class="input-50">
@@ -182,11 +183,11 @@
                         </div>
                     </div>
                     <div id="datos">
-                        <div>
+                        <div class="input-50">
                             <label for="direccion">Direccion</label><br>
                             <input type="text" id="direccion" name="direccion" class="input">
                         </div>
-                        <div>
+                        <div class="input-50">
                             <label for="ciudad">Ciudad</label><br>
                             <input type="text" id="ciudad" name="ciudad" class="input">
                         </div>
