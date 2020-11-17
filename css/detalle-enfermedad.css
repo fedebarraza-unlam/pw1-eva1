@@ -28,17 +28,17 @@ h4 {
   width: 100%;
   height: auto;
 }
-.image-text article{
+.image-text article {
   margin: 0px 20px;
   width: auto;
   box-sizing: border-box;
-} 
-.detalle-main article{
+}
+.detalle-main article {
   margin: 20px 20px 0px 20px;
   width: 100%;
   box-sizing: border-box;
 }
-.info-mapa article{
+.info-mapa article {
   margin: 0px 20px;
   width: calc(50% - 40px);
   box-sizing: border-box;
@@ -69,6 +69,7 @@ h4 {
 }
 
 .imagenes-medidas {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -76,22 +77,24 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
-  margin: 0;
+  width: 85%;
+  margin: auto;
 }
 .imagenes-medidas article ul {
   list-style: none;
 }
 .imagenes-medidas article img {
-  width: calc(25% - 40px);
+  width: calc(50% - 0.2em);
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 .info-mapa {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.info-mapa h2{
+.info-mapa h2 {
   width: 100%;
 }
 .informacion-hospital h3 {
@@ -105,15 +108,43 @@ h4 {
   margin-bottom: 5px;
 }
 .informacion-hospital img {
-  width: 350px;
+  width: 100%;
 }
-.mapa iframe {
+
+.informacion-hospital iframe {
+  margin-top: 0.25em;
   width: 100%;
   height: 100%;
 }
 
 #mensaje {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .imagenes-medidas article img {
+    width: calc(33% - 0.2em);
+  }
+
+  .info-mapa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+  }
+
+  .informacion-hospital {
+    width: calc(45% - 0.5em);
+  }
+
+  .informacion-hospital iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacion-hospital img {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -123,18 +154,18 @@ h4 {
   .image-text article {
     width: calc(50% - 40px);
   }
-  .detalle-main article{
+  .detalle-main article {
     margin: 0px 20px;
     width: calc(50% - 40px);
     box-sizing: border-box;
   }
 }
-@media (max-width: 768px){
-  .detalle-main h2{
+@media (max-width: 768px) {
+  .detalle-main h2 {
     margin: 15px 15px 0px 15px;
   }
 }
-@media (min-width: 425px){
+@media (min-width: 425px) {
   .sintomas-img img {
     margin: 0px 50px;
     width: calc(50% - 100px);
