@@ -35,10 +35,10 @@
   background-color: rgb(228, 228, 228);
   border-color: rgb(0, 0, 0);
 }
-.listado .detalle{
+.listado .detalle {
   margin: 0px 18px;
 }
-.listado .miniatura{
+.listado .miniatura {
   margin: 0px 18px;
 }
 .listado h3 {
@@ -52,7 +52,7 @@
   border-style: solid;
   border-color: rgb(114, 114, 114);
 }
-.boton-detalle a{
+.boton-detalle a {
   text-decoration: none;
   color: white;
 }
@@ -66,7 +66,7 @@
   width: 100px;
   margin: 20px 0px;
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .listado {
     display: flex;
     flex-wrap: wrap;

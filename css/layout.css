@@ -156,13 +156,16 @@ footer ul li {
 
 .redes {
   flex-basis: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .redes .iconos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 200px;
+  margin: auto;
 }
 
 .redes .iconos a {
@@ -181,11 +184,10 @@ footer ul li {
 }
 
 @media (min-width: 520px) {
-
   .logo img {
-  width: 20%;
-  position: relative;
-  left: 50%;
+    width: 20%;
+    position: relative;
+    left: 50%;
   }
 
   .buscador button {
