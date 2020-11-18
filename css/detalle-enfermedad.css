@@ -165,6 +165,10 @@ h4 {
     width: calc(50% - 40px);
     box-sizing: border-box;
   }
+  .imagenes-medidas article img {
+    width: calc(25% - 40px);
+    margin-bottom: 20px;
+  }
   .informacion-hospital img {
     width: 50%;
   }
