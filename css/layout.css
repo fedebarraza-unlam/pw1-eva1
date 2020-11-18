@@ -55,14 +55,22 @@ header .contenedor {
 }
 
 /*MENU*/
-nav {
+.menu{
+  display: none;
+}
+nav{
   background-color: #00aeff;
+  position: relative;
 }
 nav ul {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
+
+nav ul li{
+  display: block;
+  text-align: center;
+}
+
 nav li {
   list-style: none;
 }
@@ -75,6 +83,18 @@ nav a {
 nav a:hover {
   color: #0093d5;
   background-color: #dcefff;
+}
+a.desplegable{
+  display: block;
+  width: 100%;
+  height: 38px;
+  background-image: url(../img/hamburger.gif);
+  background-color: #06a8de;
+  background-repeat: no-repeat;
+  position:static;
+  top:0;
+  right: 1%;
+  cursor: pointer;
 }
 
 /*BODY*/
@@ -113,9 +133,9 @@ h2 {
   flex-direction: row;
   width: 100%;
 }
-a {
+.menu-inferior a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /*FOOTER*/
@@ -156,13 +176,16 @@ footer ul li {
 
 .redes {
   flex-basis: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .redes .iconos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 200px;
+  margin: auto;
 }
 
 .redes .iconos a {
@@ -181,17 +204,31 @@ footer ul li {
 }
 
 @media (min-width: 520px) {
-
   .logo img {
-  width: 20%;
-  position: relative;
-  left: 50%;
+    width: 20%;
+    position: relative;
+    left: 50%;
   }
 
   .buscador button {
     height: 40px;
     width: 4%;
   }
+
+  .menu{
+    display: flex;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+ 
+  
+  a.desplegable{
+    display: none;
+  }
+  
 
   footer {
     justify-content: space-around;
@@ -204,6 +241,24 @@ footer ul li {
     flex-grow: 0;
     max-width: 200px;
   }
+}
+
+@media (min-width: 768px) {
+  .menu{
+    display: flex;
+  }
+
+  .logo img {
+    width: 20%;
+    position: relative;
+    left: 50%;
+  }
+
+  .buscador button {
+    height: 40px;
+    width: 4%;
+  }
+
 }
 
 @media (min-width: 1440px) {

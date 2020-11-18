@@ -4,17 +4,11 @@ a {
 p {
   margin: 5px 0px;
 }
-article {
-  margin: 0px 20px;
-  width: calc(50% - 40px);
-  box-sizing: border-box;
-}
 h1 {
   margin: 50px;
   text-align: center;
 }
 h2 {
-  width: 100%;
   margin: 30px;
   text-transform: uppercase;
 }
@@ -25,19 +19,24 @@ h3 {
 h4 {
   margin-bottom: 10px;
 }
-
 .image-text {
   display: flex;
   flex-direction: column;
 }
-.image-text article {
-  width: auto;
-}
 .image-text .main-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
-
+.image-text article {
+  margin: 0px 20px;
+  width: auto;
+  box-sizing: border-box;
+}
+.detalle-main article {
+  margin: 20px 20px 0px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .detalle-main {
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +48,6 @@ h4 {
 .detalle-main a:hover {
   text-decoration: underline;
 }
-
 .sintomas-img {
   display: flex;
   flex-direction: row;
@@ -57,14 +55,15 @@ h4 {
   justify-content: space-around;
 }
 .sintomas-img img {
-  margin: 0px 50px;
-  width: calc(50% - 100px);
+  margin: 0px 0px;
+  width: calc(50% - 20px);
 }
 .descripcion img {
   width: 100%;
 }
 
 .imagenes-medidas {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -72,20 +71,26 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
-  margin: 0;
+  width: 85%;
+  margin: auto;
 }
 .imagenes-medidas article ul {
   list-style: none;
 }
 .imagenes-medidas article img {
-  width: calc(25% - 40px);
+  width: calc(50% - 0.2em);
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 .info-mapa {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+.info-mapa article {
+  margin: 10px 20px;
+  box-sizing: border-box;
 }
 .informacion-hospital h3 {
   color: #0093d5;
@@ -98,9 +103,11 @@ h4 {
   margin-bottom: 5px;
 }
 .informacion-hospital img {
-  width: 350px;
+  width: 100%;
 }
-.mapa iframe {
+
+.informacion-hospital iframe {
+  margin-top: 0.25em;
   width: 100%;
   height: 100%;
 }
@@ -109,12 +116,60 @@ h4 {
   width: 100%;
 }
 
+@media (min-width: 425px) {
+  .sintomas-img img {
+    margin: 0px 50px;
+    width: calc(50% - 100px);
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    width: 100%;
+  }
+
+  .imagenes-medidas article img {
+    width: calc(33% - 0.2em);
+  }
+
+  .info-mapa {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+  }
+
+  .info-mapa article {
+    margin: 0px 20px;
+    width: calc(50% - 40px);
+  }
+
+  .informacion-hospital {
+    width: calc(45% - 0.5em);
+  }
+
+  .informacion-hospital iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @media (min-width: 1024px) {
   .image-text {
     flex-direction: row;
   }
-
   .image-text article {
     width: calc(50% - 40px);
+  }
+  .detalle-main article {
+    margin: 0px 20px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+  }
+  .imagenes-medidas article img {
+    width: calc(25% - 40px);
+    margin-bottom: 20px;
+  }
+  .informacion-hospital img {
+    width: 50%;
   }
 }

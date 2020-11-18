@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/mapa-hospitales.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/mapa-hospitales.js"></script>
     <title>Mapa de hospitales | Clinica Bastia</title>
 </head>
 
@@ -33,11 +36,11 @@
         </section>
         <section>
             <nav>
-                <ul>
+                <a class="desplegable"></a>
+                <ul class="menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="listado-enfermedades.html">ENFERMEDADES</a></li>
-                    <li><a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
-                            target="blank">VACUNACIÓN</a></li>
+                    <li><a href="calendario.html">VACUNACIÓN</a></li>
                     <li><a href="mapa-hospitales.html">HOSPITALES</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
                 </ul>
@@ -51,6 +54,45 @@
             <article class="mapa">
                 <iframe src="https://www.google.com/maps/d/embed?mid=17k4OgpFlQPbUClZI8SW-0F4DEB0" frameborder="0"
                     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </article>
+            <h2>Hospitales con unidades de terapias intensivas</h2>
+            <article class="listado">
+                <div class="item" id="carrillo">
+                    <p>Hospital Carrillo</p>
+                </div>
+                <div class="item" id="agudos">
+                    <p>Hospital Interzonal General de Agudos</p>
+                </div>
+                <div class="item" id="posadas">
+                    <p>Hospital Posadas</p>
+                </div>
+            </article>
+            <article class="popup" id="carrilloPopup">
+                <div class="cerrar">
+                </div>
+                <div>
+                    <p>Hospital: Carrillo</p>
+                    <p>Dirección: Hipólito Yrigoyen 1650.</p>
+                    <p>Localidad: Ciudadela, Provincia de Buenos Aires.</p>
+                </div>
+            </article>
+            <article class="popup" id="agudosPopup">
+                <div class="cerrar">
+                </div>
+                <div>
+                    <p>Hospital: Interzonal General de Agudos</p>
+                    <p>Dirección: Av. Rivadavia 15000.</p>
+                    <p>Localidad: Haedo, Provincia de Buenos Aires.</p>
+                </div>
+            </article>
+            <article class="popup" id="posadasPopup">
+                <div class="cerrar">
+                </div>
+                <div>
+                    <p>Hospital: Posadas</p>
+                    <p>Dirección: Av. Presidente Arturo U. Illia 386.</p>
+                    <p>Localidad: El Palomar, Provincia de Buenos Aires.</p>
+                </div>
             </article>
         </section>
     </main>
@@ -72,8 +114,7 @@
                     <li>
                         <a href="listado-enfermedades.html">Enfermedades</a></li>
                     <li>
-                        <a href="https://www.buenosaires.gob.ar/salud/programasdesalud/vacunaseinmunizacion"
-                            target="blank">Vacunas</a>
+                        <a href="calendario.html">Vacunas</a>
                     </li>
                     <li>
                         <a href="mapa-hospitales.html">Hospitales</a>

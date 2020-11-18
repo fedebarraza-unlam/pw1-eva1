@@ -1,0 +1,31 @@
+.fc-button-primary {
+  background-color: #0093d5 !important;
+  border-color: #0093d5 !important;
+}
+
+.fc-daygrid-event {
+  background-color: #00aeff !important;
+}
+
+#calendario {
+  font-family: "Roboto Condensed", sans-serif;
+}
+main section {
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0px 10px 50px 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  main section {
+    max-width: 1440px;
+    margin: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .fc-direction-ltr {
+    text-align: center;
+  }
+}

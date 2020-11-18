@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".desplegable").click(function(){
+        if($('.menu').is(":visible")){
+            $('.menu').slideUp();
+        }else{
+          $('.menu').slideDown();
+        }
+      });
+});
