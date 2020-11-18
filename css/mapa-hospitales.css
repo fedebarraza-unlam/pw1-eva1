@@ -39,10 +39,9 @@ h2 {
   display: none;
   text-align: left;
   position: fixed;
-  width: 50%;
-  height: 10em;
-  top: 0%;
-  left: 0%;
+  height: 4em;
+  top: 5%;
+  left: 5%;
   z-index: 2;
   border: 0.2em solid white;
   border-radius: 1em;
