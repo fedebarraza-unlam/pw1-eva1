@@ -3,12 +3,13 @@ main section {
 }
 
 .hero-carousel .arrow {
+  z-index: 1;
   height: 50px;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  visibility: hidden;
 }
 
 .hero-carousel .arrow.left {
@@ -21,7 +22,7 @@ main section {
 
 .hero-image img {
   width: 100%;
-  height: 600px;
+  height: 450px;
   object-fit: cover;
 }
 
@@ -113,4 +114,14 @@ h2 {
 
 .llama span {
   font-size: 9em;
+}
+
+@media (min-width: 768px) {
+  .hero-carousel .arrow {
+    visibility: visible;
+  }
+
+  .hero-image img {
+    height: 650px;
+  }
 }

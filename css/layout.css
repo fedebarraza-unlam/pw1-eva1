@@ -181,11 +181,10 @@ footer ul li {
 }
 
 @media (min-width: 520px) {
-
   .logo img {
-  width: 20%;
-  position: relative;
-  left: 50%;
+    width: 20%;
+    position: relative;
+    left: 50%;
   }
 
   .buscador button {
