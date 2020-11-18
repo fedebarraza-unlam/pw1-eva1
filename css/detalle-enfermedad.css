@@ -9,7 +9,6 @@ h1 {
   text-align: center;
 }
 h2 {
-  width: 100%;
   margin: 30px;
   text-transform: uppercase;
 }
@@ -36,11 +35,6 @@ h4 {
 .detalle-main article {
   margin: 20px 20px 0px 20px;
   width: 100%;
-  box-sizing: border-box;
-}
-.info-mapa article {
-  margin: 0px 20px;
-  width: calc(50% - 40px);
   box-sizing: border-box;
 }
 .detalle-main {
@@ -91,11 +85,12 @@ h4 {
 .info-mapa {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
-.info-mapa h2 {
-  width: 100%;
+.info-mapa article {
+  margin: 10px 20px;
+  box-sizing: border-box;
 }
 .informacion-hospital h3 {
   color: #0093d5;
@@ -121,16 +116,31 @@ h4 {
   width: 100%;
 }
 
+@media (min-width: 425px) {
+  .sintomas-img img {
+    margin: 0px 50px;
+    width: calc(50% - 100px);
+  }
+}
+
 @media (min-width: 768px) {
+  h2 {
+    width: 100%;
+  }
+
   .imagenes-medidas article img {
     width: calc(33% - 0.2em);
   }
 
   .info-mapa {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0.5em;
+  }
+
+  .info-mapa article {
+    margin: 0px 20px;
+    width: calc(50% - 40px);
   }
 
   .informacion-hospital {
@@ -140,10 +150,6 @@ h4 {
   .informacion-hospital iframe {
     width: 100%;
     height: 100%;
-  }
-
-  .informacion-hospital img {
-    width: 50%;
   }
 }
 
@@ -159,15 +165,7 @@ h4 {
     width: calc(50% - 40px);
     box-sizing: border-box;
   }
-}
-@media (max-width: 768px) {
-  .detalle-main h2 {
-    margin: 15px 15px 0px 15px;
-  }
-}
-@media (min-width: 425px) {
-  .sintomas-img img {
-    margin: 0px 50px;
-    width: calc(50% - 100px);
+  .informacion-hospital img {
+    width: 50%;
   }
 }
