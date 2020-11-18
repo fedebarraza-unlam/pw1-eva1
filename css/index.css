@@ -2,21 +2,27 @@ main section {
   margin: 10px 0;
 }
 
-.hero-image {
-  background-image: url("../img/hero/mujer-barbijo.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+.hero-carousel .arrow {
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hero-carousel .arrow.left {
+  left: 30px;
+}
+
+.hero-carousel .arrow.right {
+  right: 30px;
 }
 
 .hero-image img {
-  height: 50px;
-  cursor: pointer;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .main-menu {
