@@ -4,6 +4,9 @@
 - HTML5
 - CSS3
 - Fontawesome
+- Jquery
+- Slick
+- FullCalendar
 
 ## Autores
 - Barraza Federico
